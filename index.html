@@ -6,6 +6,7 @@
     <meta name="description" content="CS135 HW1">
     <meta name="keywords" content="HTML,CSS,JavaScript">
   <meta name="author" content="Marina Kent">
+  <!-- internal css for the table -->
   <style>
   table, th, td {
       border: 1px solid black;
@@ -17,12 +18,29 @@
   </style>
 </head>
 <html>
+
+<!-- the header - the title  -->
+<header>
+  <h1 align="center">The Raccoon</h1>
+</header>
+
+<!-- the body contains all of the content -->
 <body>
 
+<!-- a table, which is mostly for decooration -->
+<!-- there is a lot of inline CSS here -->
 <table align="center"; style="width:70%">
   <tr>
     <th></th>
-    <th><h2>The Raccoon</h2></th> 
+    <!-- nav section for different animals -->
+    <th>
+      Similar animals:
+      <nav>
+        <a href="https://www.google.com/search?q=coatis&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjV-LWP-t7RAhUCwWMKHY80DjwQ_AUICCgB&biw=1280&bih=591">Coatis</a> |
+        <a href="https://www.google.com/search?q=kinkajou&espv=2&biw=1280&bih=591&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjI24yS-t7RAhUI12MKHfpFACAQ_AUIBigB">Kinkajou</a> |
+        <a href="https://www.google.com/search?q=olinguito&espv=2&biw=1280&bih=591&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFssyW-t7RAhVQz2MKHRDVDBsQ_AUIBigB">Olinguito</a>
+      </nav>
+    </th> 
     <th></th>
   </tr>
   <tr align="center">
@@ -34,61 +52,80 @@
   </tr>
   <tr>
     <td></td>
-    <td><h2><font color="white">this is here for even spacing.</font></h2></td>
+    <!-- extra words here to make the spacing equal. Also a suprise for people who highlight the text on the page? -->
+    <td><font color="white";>this is here for even spacing. I want to make sure it has enough words to work. I think it needs to be a little longer to be equal. </font></td>
     <td></td>
   </tr>
 </table>
 
+<br>
+
+<!-- an enbedded youtube video -->
 <div style="text-align: center"> <iframe src="https://www.youtube.com/embed/4lkPFdyyMMk" width="427" height="240" allowfullscreen></iframe>   </div>
 
-<p>
-  In case you wanted to know the exact taxonomy of raccoons:</p>
-<ul>
-  <li>
-    Kingdom: Animalia</li>
-  <li>
-    Subkingdom: Bilateria &nbsp; &nbsp; &nbsp;</li>
-  <li>
-    Infrakingdom: Deuterostomia &nbsp; &nbsp; &nbsp;</li>
-  <li>
-    Phylum: Chordata</li>
-  <li>
-    Subphylum: Vertebrata</li>
-  <li>
-    Infraphylum: Gnathostomata &nbsp; &nbsp; &nbsp;</li>
-  <li>
-    Superclass: Tetrapoda &nbsp; &nbsp; &nbsp;</li>
-  <li>
-    Class: Mammalia&nbsp;</li>
-  <li>
-    Subclass: Theria&nbsp;</li>
-  <li>
-    Infraclass: Eutheria&nbsp;</li>
-  <li>
-    Order: Carnivora</li>
-  <li>
-    Suborder: Caniformia&nbsp;</li>
-  <li>
-    Family: Procyonidae&nbsp;</li>
-  <li>
-    Genus:&nbsp;<em>Procyon</em></li>
-  <li>
-    Species:&nbsp;<em>Procyon</em>&nbsp;<em>cancrivorous&nbsp;</em>(crab-eating raccoon), with four subspecies;&nbsp;<em>Procyon lotor&nbsp;</em>(common raccoon), with 22 subspecies; and&nbsp;<em>Procyon pygmaeus&nbsp;</em>(Cozumel raccoon or pygmy raccoon).</li>
-</ul>
+<!-- an unordered list -->
+<section>
+  <p>
+    In case you wanted to know the exact taxonomy of raccoons:</p>
+  <ul>
+    <li>
+      Kingdom: Animalia</li>
+    <li>
+      Subkingdom: Bilateria &nbsp; &nbsp; &nbsp;</li>
+    <li>
+      Infrakingdom: Deuterostomia &nbsp; &nbsp; &nbsp;</li>
+    <li>
+      Phylum: Chordata</li>
+    <li>
+      Subphylum: Vertebrata</li>
+    <li>
+      Infraphylum: Gnathostomata &nbsp; &nbsp; &nbsp;</li>
+    <li>
+      Superclass: Tetrapoda &nbsp; &nbsp; &nbsp;</li>
+    <li>
+      Class: Mammalia&nbsp;</li>
+    <li>
+      Subclass: Theria&nbsp;</li>
+    <li>
+      Infraclass: Eutheria&nbsp;</li>
+    <li>
+      Order: Carnivora</li>
+    <li>
+      Suborder: Caniformia&nbsp;</li>
+    <li>
+      Family: Procyonidae&nbsp;</li>
+    <li>
+      Genus:&nbsp;<em>Procyon</em></li>
+    <li>
+      Species:&nbsp;<em>Procyon</em>&nbsp;<em>cancrivorous&nbsp;</em>(crab-eating raccoon), with four subspecies;&nbsp;<em>Procyon lotor&nbsp;</em>(common raccoon), with 22 subspecies; and&nbsp;<em>Procyon pygmaeus&nbsp;</em>(Cozumel raccoon or pygmy raccoon).</li>
+  </ul>
+</section>
 
-<p>Reasons I made this website:</p>
-<ol>
-  <li>My friend made a website about raccoons last year and now I'm totally copying her.
-  <li>Raccoons are pretty cool. 
-  <li>Seemed like a pretty okay idea for this assignment. 
-  <li>My love of this gif.
-</ol>
+<!-- an ordered list -->
+<section>
+  <p>Reasons I made this website:</p>
+  <ol>
+    <li>My friend made a website about raccoons last year and now I'm totally copying her idea.
+    <li>Raccoons are pretty cool. 
+    <li>My love of this gif:
+  </ol>
+</section>
 
+<!-- a very sad raccoon -->
 <img src="soSad.gif" alt=":(" style="width:30%;">
 
 <br>
 
-<h4>For more information, this <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a> has amazing information about raccoons. </h4>
+<!-- an article section for a self contained section of text -->
+<article>
+  <h3>About the author:</h3>
+  <p>Marina is a Scripps senior, majoring in Computer Science.</p>
+</article>
 
 </body>
+
+<!-- the footer, contining an extra link -->
+<footer>
+  <h4>For more information, this <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a> has amazing information about raccoons. </h4>
+</footer>
 </html>
