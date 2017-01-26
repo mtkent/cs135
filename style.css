@@ -1,0 +1,15 @@
+/* all h1 text will be red and centered*/
+h1 {
+    color: red;
+    align: center;
+}
+
+/* the body will be a light blue background*/
+body {
+    background-color: lightblue;
+}
+
+/* the table will have a white background*/
+table {
+	background-color: white;
+}
