@@ -28,6 +28,15 @@
       display: block;
       margin-top: 100%;
     }
+    .red {
+      background-color: red;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .white {
+      background-color: white;
+    }
   </style>
 </head>
 
@@ -41,24 +50,67 @@
   <!-- the body contains all of the content -->
   <body>
 
-  <!-- a table, which is mostly for decooration -->
-  <table align="center";>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-      </td>
-      <td></td>
-    </tr>
-  </table>
+    <!-- a table, containing the red/blue tiles -->
+    <table align="center"; id="myTable";>
+      <tr>
+        <td id = '1'; onclick="cellClick(1)">Sample</td>
+        <td id = '2'; onclick="cellClick(2)">Sample2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="white"></td>
+        <td class="white"></td>
+        <td class="white"></td>
+      </tr>
+      <tr>
+        <td class="white"></td>
+        <td class="white"></td>
+        <td class="white"></td>
+      </tr>
+    </table>
+
+    <script>
+        // function changeImage() {
+        //   // To change the value of the source attribute (src) of an
+        //   // HTML <img> element: 
+        //   var image = document.getElementById('myImage');  // Line 1
+        //   if (image.src.match("IMG2")) {     
+        //     image.src = "images/IMG15.jpg";
+        //   }
+        //   else {
+        //     image.src = "images/IMG2.jpg";
+        //   }
+        // }
+
+// document.getElementById().style.background
+        function cellClick(cell) {
+          if (document.getElementById(cell).style.background != "blue"){
+            document.getElementById(cell).style.background = "red";
+
+          } else {
+            document.getElementById(cell).style.background = "blue";
+          }
+        }
+        // this.className = this.className == "white" ? "green": "white";
+
+        // var cells = document.querySelectorAll("td");
+
+        // for (var i = 0; i < cells.length; i++) {
+        //     cells[i].addEventListener("click", function() {
+        //        this.className= this.className == "white" ? "green" : "white";
+        //     });
+        // }
+// function cellClick() {
+//     var x = document.getElementById("mytable").getElementsByTagName("td");
+//     x[0].innerHTML = "i want to change my cell color";
+//     x[0].style.backgroundColor = "yellow";            
+// }
+    </script>
+
+
+  </body>
 
 </html>
+
+
+
