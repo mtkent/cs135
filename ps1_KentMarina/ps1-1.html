@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+<!-- the title of the page -->
+<title> Trash Pandas </title>
+
+<!-- the metadata of the page -->
+<meta charset="UTF-8">
+<meta name="description" content="CS135 PS1-1">
+<meta name="keywords" content="HTML,CSS">
+<meta name="author" content="Marina Kent">
+
+<!-- internal css for the table -->
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+  }
+  .corner {
+    background-color: orange;
+  }
+  #lastline {
+    font-style: italic;
+  }
+</style>
+
+<!-- the external CSS style -->
+<link rel="stylesheet" type="text/css" href="ps1-1.css">
+
+</head>
+
+<!-- the body contains all of the content -->
+<body>
+
+  <!-- the header - tells us what page is about  -->
+  <header>
+    <h1 style="text-align:center;">The Raccoon</h1>
+  </header>
+
+  <!-- a table, which is mostly for decooration -->
+  <table class="center" style="width:70%">
+    <tr>
+      <td class="corner"></td>
+      <!-- nav section for different animals -->
+      <td style="text-align:center; font-weight: bold">
+        Similar animals:
+        <nav>
+          <a href="https://www.google.com/search?q=coatis&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjV-LWP-t7RAhUCwWMKHY80DjwQ_AUICCgB&biw=1280&bih=591">Coatis</a> |
+          <a href="https://www.google.com/search?q=kinkajou&espv=2&biw=1280&bih=591&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjI24yS-t7RAhUI12MKHfpFACAQ_AUIBigB">Kinkajou</a> |
+          <a href="https://www.google.com/search?q=olinguito&espv=2&biw=1280&bih=591&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFssyW-t7RAhVQz2MKHRDVDBsQ_AUIBigB">Olinguito</a>
+        </nav>
+      </td> 
+      <td class="corner"></td>
+    </tr>
+    <tr style="text-align:center">
+      <td></td>
+      <!-- A gif of raccoon hands --> 
+      <td>
+        <img src="raccoon-hands.gif" alt="creepy hands" style="width:30%;"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="corner"></td>
+        <!-- extra words here to make the spacing equal. Also a suprise for people who highlight the text on the page? -->
+        <td style="color:white;">
+          this is here for even spacing. I want to make sure it has enough words to work. It needs two lines to make sure it's long enough. 
+        </td>
+        <td class="corner"></td>
+      </tr>
+    </table>
+
+    <!-- extra line to make spacing better -->
+    <br>
+
+    <!-- an enbedded youtube video, with inline CSS -->
+    <div style="text-align: center"> <iframe src="https://www.youtube.com/embed/4lkPFdyyMMk" width="427" height="240" allowfullscreen></iframe>   </div>
+
+    <!-- an unordered list -->
+    <section>
+      <p> In case you wanted to know the exact taxonomy of raccoons:</p>
+      <ul>
+        <li>Kingdom: Animalia</li>
+        <li>Subkingdom: Bilateria</li>
+        <li>Infrakingdom: Deuterostomia</li>
+        <li>Phylum: Chordata</li>
+        <li>Subphylum: Vertebrata</li>
+        <li>Infraphylum: Gnathostomata </li>
+        <li>Superclass: Tetrapoda </li>
+        <li>Class: Mammalia</li>
+        <li>Subclass: Theria</li>
+        <li>Infraclass: Eutheria</li>
+        <li>Order: Carnivora</li>
+        <li>Suborder: Caniformia</li>
+        <li>Family: Procyonidae</li>
+        <li>Genus: <em>Procyon</em></li>
+        <li>Species: <em>Procyon</em><em>cancrivorous</em>(crab-eating raccoon), with four subspecies; <em>Procyon lotor</em> (common raccoon), with 22 subspecies; and<em> Procyon pygmaeus</em> (Cozumel raccoon or pygmy raccoon).</li>
+      </ul>
+    </section>
+
+    <!-- an ordered list -->
+    <section>
+      <p>Reasons I made this website:</p>
+      <ol>
+        <li>My friend made a website about raccoons last year and now I'm totally copying her idea.
+        <li>Raccoons are pretty cool. 
+        <li>My love of this gif:
+      </ol>
+    </section>
+
+    <!-- a very sad raccoon gif-->
+    <img src="soSad.gif" alt=":(" style="width:30%;">
+
+    <!-- another break for better spacing -->
+    <br>
+
+    <!-- an article section for a self contained section of text -->
+    <article>
+      <h3>About the author:</h3>
+      <p>Marina is a Scripps senior, majoring in Computer Science.</p>
+    </article>
+
+    <!-- the footer, contining an extra link -->
+    <footer>
+      <h4 id="lastline">For more information, this <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a> has amazing information about raccoons. </h4>
+    </footer>
+
+</body>
+</html>

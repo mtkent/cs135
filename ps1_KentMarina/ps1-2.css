@@ -1,0 +1,28 @@
+/*all of the external css:*/
+
+/*these first four are used for making sure the table and its items looks correct*/
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  width: 35%;
+}
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+td {
+  width: 33.33%;
+  position: relative;
+}
+td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+/*this lines up the button in the center*/
+.wrapper {
+  text-align: center;
+}
