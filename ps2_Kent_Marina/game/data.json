@@ -1,0 +1,79 @@
+{
+  "people": [
+    {
+      "firstname": "ben",
+      "lastname":  "aflack",
+      "image":  "aflack.jpg"
+    },
+    {
+      "firstname": "jessica",
+      "lastname":  "alba",
+      "image":  "alba.jpg"
+    },
+    {
+      "firstname": "halle",
+      "lastname":  "berry",
+      "image":  "berry.jpg"
+    },
+    {
+      "firstname": "matt",
+      "lastname":  "damon",
+      "image":  "damon.jpg"
+    },
+    {
+      "firstname": "morgan",
+      "lastname":  "freeman",
+      "image":  "freeman.jpg"
+    },
+    {
+      "firstname": "tom",
+      "lastname":  "hanks",
+      "image":  "hanks.jpg"
+    },
+    {
+      "firstname": "jennifer",
+      "lastname":  "lawrence",
+      "image":  "lawrence.jpg"
+    },
+    {
+      "firstname": "lucy",
+      "lastname":  "liu",
+      "image":  "liu.jpg"
+    },
+    {
+      "firstname": "brad",
+      "lastname":  "pitt",
+      "image":  "pitt.jpg"
+    },
+    {
+      "firstname": "chris",
+      "lastname":  "pratt",
+      "image":  "pratt.jpg"
+    },
+    {
+      "firstname": "will",
+      "lastname":  "smith",
+      "image":  "smith.jpg"
+    },
+    {
+      "firstname": "kristen",
+      "lastname":  "stewart",
+      "image":  "stewart.jpg"
+    },
+    {
+      "firstname": "zhang",
+      "lastname":  "ziyi",
+      "image":  "ziyi.jpg"
+    },
+    {
+      "firstname": "john",
+      "lastname":  "cho",
+      "image":  "chochch.jpg"
+    },
+    {
+      "firstname": "rami",
+      "lastname":  "malek",
+      "image":  "malek.jpg"
+    }
+  ]
+}

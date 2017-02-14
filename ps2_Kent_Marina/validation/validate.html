@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CS135 PS2-1">
+    <meta name="author" content="marina kent">
+    
+    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Sample Registration Form</title>
+
+    <!-- Bootstrap (incase you need nice grid layout -->
+    <!-- download it from the website: http://getbootstrap.com  
+         it was too large to include in template folder, but I included link below -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+    
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Your own CSS  -->
+    <link rel="stylesheet" href="css/validate.css">
+    <!-- Your own JavaScript  -->
+    <script src="js/validate.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+
+
+      <fieldset>
+      <form name="frmRegister" method="post" action="action_page.php">
+        
+        <legend for="firstname">First name:
+        <input type="text" name="firstname" value="" onBlur="validateField(this,'Your name should only be alphanumeric', isAlphaNum)"> </legend>
+
+        <legend for="lastname">Last name:
+        <input type="text" name="lastname" value="" onBlur="validateField(this,'Your name should only be alphanumeric', isAlphaNum)"> </legend>
+  
+        <legend for="password">Password:
+        <input type="password" name="password" value="" onBlur="validateField(this,'Your password must be at least 8 character long, and have at least one number', passCheck)"> </legend>
+
+        <legend for="email">Email:
+        <input type="txt" name="email" value="" onBlur="validateField(this,'email is not correct format', isPhoneNum)"> </legend>
+    
+        <legend for="phone">Phone:
+        <input type="txt" name="phone" value="" onBlur="validateField(this,'phone is not correct format', isPhoneNum)"> </legend>
+
+
+        <legend for="radColleges" id="radio1"> College Selection:
+        <p><input type="radio" name="radColleges" value="Claremont McKenna" /> Claremont McKenna</p>
+        <p><input type="radio" name="radColleges" value="Scripps" /> Scripps </p>
+        <!-- <img width="40px" height="40px" src="images/scripps.png" /> -->
+        <p><input type="radio" name="radColleges" value="Pitzer" /> Pitzer </p>
+        <p><input type="radio" name="radColleges" value="Pomona" /> Pomona </p>
+        <p><input type="radio" name="radColleges" value="Harvey Mudd" /> Harvey Mudd </p>
+        </legend>
+
+        <!-- Radio Button Example -->
+
+        <legend> Attractions (select 2+) 
+        <p><input type="checkbox" name="chkAttr" value="Disney" /> Disney </p>
+        <p><input type="checkbox" name="chkAttr" value="Sea World" /> Sea World </p>
+        <p><input type="checkbox" name="chkAttr" value="Universal" /> Universal </p>
+        <p><input type="checkbox" name="chkAttr" value="CS 40" /> CS 135! </p>
+        </legend>
+
+        <p><input type="button" value="Submit" onclick="validateField(radColleges, 'you must select a college', radioCheck)"/></p>
+  
+  
+    </form></fieldset>
+  </div>
+
+
+ 
+  </body>
+</html>
