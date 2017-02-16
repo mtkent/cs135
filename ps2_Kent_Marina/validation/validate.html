@@ -31,22 +31,19 @@
 
 
       <fieldset>
-      <form name="frmRegister" method="post" action="action_page.php">
+      <form name="frmRegister" method="post" action="action_page.php" >
         
-        <legend for="firstname">First name:
-        <input type="text" name="firstname" value="" onBlur="validateField(this,'Your name should only be alphanumeric', isAlphaNum)"> </legend>
+        <legend for="firstname">Username:
+        <input type="text" name="firstname" value="" onBlur="validateField(this,'Your username should only contain alphanumeric characters.', isAlphaNum)"> <span class="info" style="visibility: hidden"> </span> </legend>
 
-        <legend for="lastname">Last name:
-        <input type="text" name="lastname" value="" onBlur="validateField(this,'Your name should only be alphanumeric', isAlphaNum)"> </legend>
-  
         <legend for="password">Password:
-        <input type="password" name="password" value="" onBlur="validateField(this,'Your password must be at least 8 character long, and have at least one number', passCheck)"> </legend>
+        <input type="password" name="password" value="" onBlur="validateField(this,'Your password must be at least 8 character long, and have at least one number.', passCheck)"> </legend>
 
         <legend for="email">Email:
-        <input type="txt" name="email" value="" onBlur="validateField(this,'email is not correct format', isPhoneNum)"> </legend>
+        <input type="txt" name="email" value="" onBlur="validateField(this,'Email is not correct format ([a-z]@[a-z].(com, edu, gov).', isEmail)"> </legend>
     
         <legend for="phone">Phone:
-        <input type="txt" name="phone" value="" onBlur="validateField(this,'phone is not correct format', isPhoneNum)"> </legend>
+        <input type="txt" name="phone" value="" onBlur="validateField(this,'Phone number is not correct format (XXX XXX XXXX).', isPhoneNum)"> </legend>
 
 
         <legend for="radColleges" id="radio1"> College Selection:
@@ -67,7 +64,7 @@
         <p><input type="checkbox" name="chkAttr" value="CS 40" /> CS 135! </p>
         </legend>
 
-        <p><input type="button" value="Submit" onclick="validateField(radColleges, 'you must select a college', radioCheck)"/></p>
+        <p><input type="button" value="Submit" onclick="validateField(frmRegister, 'You must select a college.', radioCheck); validateField(frmRegister, 'You must select at least two attractions.', checkChecks)"/></p>
   
   
     </form></fieldset>

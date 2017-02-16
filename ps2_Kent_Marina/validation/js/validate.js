@@ -4,18 +4,38 @@ var validateField = function(fieldElem, infoMessage, validateFn) {
 	// infoMessage should be a string that gives a human-readable
 	// description of the fields requirements - message to be displayed 
 	// validateFn should be a function that validates the fields value
-  
 // will be able to write validateField(password, error, isAlpha) and return error if needed
-  if (! validateFn(fieldElem)) {
-    console.log(infoMessage);
+  if (fieldElem.value === ""){
+     $('<span id="span1" class="info">infoMessage</span>').insertAfter(fieldElem);
+
   } else {
-    console.log("just fine");
+     if (! validateFn(fieldElem)) {
+        console.log("should be error");
+        $('#frmRegister #span1').removeClass('info').addClass('error');
+        // $('<span class="error">Error</span>').insertAfter(fieldElem);
+        // var x = document.getElementById(fieldElem).nextSibling.innerHTML;
+          // console.log(x);
+        // document.getElementById(fieldElem.id).focus();
+
+        console.log(infoMessage);
+      } else {
+        $('<span class="ok">Ok</span>').insertAfter(fieldElem);
+      }
   }
+ 
 };
 
-$(document).ready(function() {
-	// TODO: Use validateField to validate form fields on the page.
-});
+
+// function vMinimumLength (control, length, errormessage) {
+//     var error="";
+//     document.getElementById(control.id).nextSibling.innerHTML="";
+//     if (control.value.length < length) {
+//       error = errormessage;
+//       document.getElementById(control.id).nextSibling.innerHTML=errormessage;
+//       document.getElementById(control.id).focus();
+//       }
+//     return error;
+//     }
 
 
 function isAlphaNum (username, message) {
@@ -29,14 +49,15 @@ function passCheck (password) {
 }
 
 function isPhoneNum (number) {
-	return number.value.match(/\d/g).length===10;
+  var num = number.value
+	return (num.match(/\d/g) && num.length === 10);
 }
 
 // check for .com/other *************
 function isEmail (email) {
-	 var re = new RegExp(/^((?:(?:(?:\w[\.\-\+]?)*)\w)+)((?:(?:(?:\w[\.\-\+]?){0,62})\w)+)\.(\w{2,6})$/); 
-    // var re = /\S+@\S+\.+/
-    return re.test(email.value);
+  var reg = new RegExp   (/^[a-z]+@[a-z]+\.(com|gov|edu)+$/); 
+
+  return reg.test(email.value);
 }
 
 function radioCheck(form) {
