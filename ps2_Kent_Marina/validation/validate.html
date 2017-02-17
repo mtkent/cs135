@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
+<!-- head contains info for website -->
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="CS135 PS2-1">
     <meta name="author" content="marina kent">
-    
-    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Sample Registration Form</title>
 
-    <!-- Bootstrap (incase you need nice grid layout -->
-    <!-- download it from the website: http://getbootstrap.com  
-         it was too large to include in template folder, but I included link below -->
+    <!-- link to bootstrap -->
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
     
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
-    <!-- Your own CSS  -->
+    <!-- link to CSS  -->
     <link rel="stylesheet" href="css/validate.css">
-    <!-- Your own JavaScript  -->
+
+    <!-- link to JavaScript  -->
     <script src="js/validate.js"></script>
-  </head>
-  
-  <body>
+</head>
+
+<!-- body contains content of site -->
+<body>
     <div class="container">
 
-
+        <!-- form contins: username, password, email, phone number, a radio button section, and check boxes -->
+        <!-- these are all validated when clicked out of them (onBlur) -->
       <fieldset>
       <form name="frmRegister" method="post" action="action_page.php" >
         
@@ -43,7 +43,7 @@
         <input type="password" name="password" value="" onBlur="validateField(this,'Your password must be at least 8 character long, and have at least one number.', passCheck)"> </legend>
 
         <legend for="email">Email:
-        <input type="txt" name="email" value="" onBlur="validateField(this,'Email is not correct format ([a-z]@[a-z].(com, edu, gov).', isEmail)"> </legend>
+        <input type="txt" name="email" value="" onBlur="validateField(this,'Email must be in this format: ([a-z]@[a-z].(com, edu, gov).', isEmail)"> </legend>
     
         <legend for="phone">Phone:
         <input type="txt" name="phone" value="" onBlur="validateField(this,'Phone number is not correct format (XXX XXX XXXX).', isPhoneNum)"> </legend>
@@ -58,7 +58,6 @@
         <p><input type="radio" name="radColleges" value="Harvey Mudd" /> Harvey Mudd </p>
         </legend>
 
-        <!-- Radio Button Example -->
 
         <legend> Attractions (select 2+) 
         <p><input type="checkbox" name="chkAttr" value="Disney" /> Disney </p>
