@@ -1,42 +1,40 @@
 var validateField = function(fieldElem, infoMessage, validateFn) {
-	// fieldElem can be a CSS selector, jQuery element, or DOM element - ex. passworkd, etc.
-	// that represents a single form text field.
-	// infoMessage should be a string that gives a human-readable
-	// description of the fields requirements - message to be displayed 
-	// validateFn should be a function that validates the fields value
-// will be able to write validateField(password, error, isAlpha) and return error if needed
+
+  if(fieldElem.parentElement.childElementCount == 1){
+    $('<span></span>').insertAfter(fieldElem);
+  } 
+
+  var theSpan = ($(fieldElem.parentElement.children).first().next());
+
   if (fieldElem.value === ""){
-     $('<span id="span1" class="info">infoMessage</span>').insertAfter(fieldElem);
+    $(theSpan).text(infoMessage);
+    $(theSpan).text(infoMessage).removeClass().addClass("info");
+
 
   } else {
-     if (! validateFn(fieldElem)) {
-        console.log("should be error");
-        $('#frmRegister #span1').removeClass('info').addClass('error');
-        // $('<span class="error">Error</span>').insertAfter(fieldElem);
-        // var x = document.getElementById(fieldElem).nextSibling.innerHTML;
-          // console.log(x);
-        // document.getElementById(fieldElem.id).focus();
-
-        console.log(infoMessage);
+     if (! validateFn(fieldElem) ) {
+        $(theSpan).text("Error");
+        $(theSpan).text("Error").removeClass().addClass("error");
+        return false;
       } else {
-        $('<span class="ok">Ok</span>').insertAfter(fieldElem);
+        $(theSpan).text("Ok");
+        $(theSpan).text("Ok").removeClass().addClass("ok");
+        return true;
       }
   }
  
 };
 
+function submitValid (fieldElem, infoMessage, validateFn) {
+  if (!validateField(fieldElem, infoMessage, validateFn)) {
+    var theSpan = ($(fieldElem.parentElement.children).first().next());
 
-// function vMinimumLength (control, length, errormessage) {
-//     var error="";
-//     document.getElementById(control.id).nextSibling.innerHTML="";
-//     if (control.value.length < length) {
-//       error = errormessage;
-//       document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-//       document.getElementById(control.id).focus();
-//       }
-//     return error;
-//     }
+    $(theSpan).text("");
+    
+    alert(infoMessage);
+  }
 
+}
 
 function isAlphaNum (username, message) {
 	return username.value.match(/^[a-z0-9]+$/i);

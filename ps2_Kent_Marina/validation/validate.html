@@ -33,8 +33,11 @@
       <fieldset>
       <form name="frmRegister" method="post" action="action_page.php" >
         
-        <legend for="firstname">Username:
-        <input type="text" name="firstname" value="" onBlur="validateField(this,'Your username should only contain alphanumeric characters.', isAlphaNum)"> <span class="info" style="visibility: hidden"> </span> </legend>
+        <legend for="firstname">First name:
+        <input type="text" name="firstname" value="" onBlur="validateField(this,'Your first name should only contain alphanumeric characters.', isAlphaNum)"> </legend>
+
+        <legend for="lastname">Last name:
+        <input type="text" name="lastname" value="" onBlur="validateField(this,'Your last name should only contain alphanumeric characters.', isAlphaNum)"> </legend>
 
         <legend for="password">Password:
         <input type="password" name="password" value="" onBlur="validateField(this,'Your password must be at least 8 character long, and have at least one number.', passCheck)"> </legend>
@@ -64,7 +67,7 @@
         <p><input type="checkbox" name="chkAttr" value="CS 40" /> CS 135! </p>
         </legend>
 
-        <p><input type="button" value="Submit" onclick="validateField(frmRegister, 'You must select a college.', radioCheck); validateField(frmRegister, 'You must select at least two attractions.', checkChecks)"/></p>
+        <p><input type="button" value="Submit" onclick="submitValid(frmRegister, 'You must select a college.', radioCheck); submitValid(frmRegister, 'You must select at least two attractions.', checkChecks)"/></p>
   
   
     </form></fieldset>
